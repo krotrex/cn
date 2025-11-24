@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Receiver {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of frames to receive: ");
+        int f = scanner.nextInt();
+        int[] frames = new int[f];
+        System.out.print("Enter " + f + " frames: ");
+        for (int i = 0; i < f; i++) {
+            frames[i] = scanner.nextInt();
+        }
+        for (int i = 0; i < f; i++) {
+            System.out.println("Receiver received frame: " + frames[i]);
+            System.out.println("Sending acknowledgment for frame " + frames[i]);
+        }
+        scanner.close();
+    }
+}
